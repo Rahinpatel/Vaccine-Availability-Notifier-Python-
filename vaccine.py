@@ -1,8 +1,7 @@
 import requests
 import argparse
 from datetime import date
-from time import time, sleep
-
+import time
 parser = argparse.ArgumentParser(description='A test program.')
 parser.add_argument("--zipcode", help="Please give zip code.")
 parser.add_argument("--age", help="Please give your age.")
@@ -15,19 +14,24 @@ headers = {
 
 
 def api_call(zipcode, today, age):
-    print(age)
+    count = 1
     try:
-        result = requests.get(('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin'), headers=headers, params={
-            'pincode': zipcode,
-            'date': today,
-        })
-        if result.status_code == 200:
-            json_response = result.json()
-            data = json_response['sessions']
-            validSlots = [key for key in data if ((key["available_capacity"])
-                          > 0 and (key["min_age_limit"]<= int(age)))]
-            notifyMe(validSlots)
-            return None
+        while (count < 10000000000):
+            result = requests.get(('https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin'), headers=headers, params={
+                'pincode': zipcode,
+                'date': today,
+            })
+            if result.status_code == 200:
+                json_response = result.json()
+                data = json_response['sessions']
+                validSlots = [key for key in data if ((key["available_capacity"])
+                                                      > 0 and (key["min_age_limit"] <= int(age)))]
+                notifyMe(validSlots)
+            else:
+                print("Server Down")
+            count = count + 1
+            time.sleep(60)
+
     except:
         print("something went wrong pls try again")
 
