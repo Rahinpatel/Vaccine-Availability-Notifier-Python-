@@ -11,3 +11,5 @@ Step 2) pip install -r requirements.tsx
 Step 3) python vaccine.py --age 20 --zipcode 380058
 
 Step 4) to stop the script ctrl + z
+
+Step to create your own bot on slack  https://slack.com/intl/en-in/help/articles/115005265703-Create-a-bot-for-your-workspace
