@@ -15,4 +15,4 @@ Step 4) to stop the script ctrl + z
 Step to create your own bot on slack  https://slack.com/intl/en-in/help/articles/115005265703-Create-a-bot-for-your-workspace
 
 Here's a sample of the message:
-[image](https://user-images.githubusercontent.com/18402211/118133075-002e8780-b41e-11eb-8006-c77eebec5c53.png)
+![image](https://user-images.githubusercontent.com/18402211/118133075-002e8780-b41e-11eb-8006-c77eebec5c53.png)
