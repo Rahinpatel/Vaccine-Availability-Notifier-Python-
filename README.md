@@ -6,8 +6,8 @@ Steps to run the script:
 
 Step 1) Python must be installed in your machine (version=3+).
 
-2) pip install -r requirements.tsx
+Step 2) pip install -r requirements.tsx
 
-3) python vaccine.py --age 20 --zipcode 380058
+Step 3) python vaccine.py --age 20 --zipcode 380058
 
-4) to stop the script ctrl + z
+Step 4) to stop the script ctrl + z
