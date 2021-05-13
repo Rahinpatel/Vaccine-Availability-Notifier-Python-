@@ -1,4 +1,4 @@
-# Vaccine-Availability-Notifier-Python-
+# Vaccine-Availability-Notifier-Python
 
 VaccineNotifier checks the cowin portal periodically to find vaccination slots available in your pin code and for your age. If found, it will send you notification on slack bot every minute until the slots are available.
 
